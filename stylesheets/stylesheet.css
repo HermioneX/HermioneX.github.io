@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
+li {
+  line-height: 1.4 ;
+}
+
 
 /* Header, <header>
    header   - container
@@ -65,11 +69,7 @@ header h2 {
   color: #666;
 }
 
-#downloads .btn {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
-}
+
 
 /* Main Content
 */
