@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>斩 by HermioneX</title>
+    <title>大头怪</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -15,9 +15,11 @@
       <h2 class="project-tagline">Simple</h2>
     </section>
 
-    <section class="main-content">
-      <h2>
-<a id="index" class="anchor" href="#index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Index</h2>
+
+</h2>
+
+#
+#
 
 <ul>
 <li><a href="https://hermionex.github.io/html/Picindex.html">Picture</a></li>
@@ -26,12 +28,7 @@
 <li>Nothing</li>
 </ul>
 
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">Thanks for coming ~ </span>
-      </footer>
-
-    </section>
+     
 
   
   </body>
