@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Picindex</title>
+<title>MarkdownPad Document</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
@@ -291,19 +291,117 @@ img {
 </style>
 </head>
 <body>
-<h1>Pictures</h1>
-<h2></h2>
-<ul>
-<li><a href="https://hermionex.github.io/html/TBindex.html">三体</a></li>
-<li><a href="https://hermionex.github.io/html/onepiece.html">海贼</a></li>
-<li><a href="https://hermionex.github.io/html/cat.html">猫</a></li>
-<li><a href="https://hermionex.github.io/html/practice.html">头像</a></li>
-</ul>
-<h2></h2>
-<ul>
-<li><a href="https://hermionex.github.io/html/practice.html">临摹练习</a></li>
-<li><a href="https://hermionex.github.io/html/practice.html">上色练习</a></li>
-</ul>
+<h2>用python写的流体力学作业</h2>
+<pre><code>#for Hedromechanics 
+#import string
+import matplotlib.pyplot as plt  
+#import numpy as np
+
+
+X=1
+m1=101.0
+m=101
+T=10
+n=2001
+a=1
+bc1=0
+bc2=0
+CFL=0.5
+
+k1=(m1-1)/4
+k2=3*k1
+k1=int(k1)
+k2=int(k2)
+h=X/(m1-1)
+#print h
+t=T/(n-1)
+r=t*t/h/h
+U_up=[[0]*m for i in range(n)]
+U_lax=[[0]*m for i in range(n)]
+
+#%%%%% Boundary conditions %%%%%
+
+i=0
+while i&lt;n:
+#   print i
+    U_up[i][0]=bc1
+    U_up[i][m-1]=bc2
+    U_lax[i][0]=bc1
+    U_lax[i][m-1]=bc2
+    i=i+1
+    if i&gt;= n:
+    break
+
+#%%%%% Initial condition %%%%%
+j=1
+while j&lt;=k1-1 :
+    U_up[0][j]=0
+    U_lax[0][j]=0
+    j=j+1
+
+j=k1
+while j&lt;=k2 :
+    U_up[0][j]=1
+    U_lax[0][j]=1
+    j=j+1
+
+j=k2
+while j&lt;=m-1:
+    U_up[0][j]=0
+    U_lax[0][j]=1
+    j=j+1
+
+
+
+
+#%%%%% Upwind scheme %%%%%
+jarr=range(1,n-1)
+iarr=range(1,m-1)
+for j in jarr:
+    for i in iarr:
+        U_up[j][i]=CFL*U_up[j-1][i-1]+CFL*U_up[j-1][i]
+        U_up[j][0]=U_up[j][m-1]
+        U_up[j][0]=CFL*U_up[j-1][0]+CFL*U_up[j-1][m-1]
+
+
+#%%%%% Lax-Wendroff %%%%%
+
+jrr=range(1,n-1)
+iarr=range(1,m-2)
+for j in jarr:
+    for i in iarr:
+        U_lax[j][i]=U_lax[j-1][i]-CFL/2*(U_lax[j-1][0]-U_lax[j-1][m-2])+CFL**2/2*(U_lax[j-1][i+1]-2*U_lax[j-1][i-1])
+    U_lax[j][m-1]=U_lax[j-1][m-1]-CFL/2*(U_lax[j-1][0]-U_lax[j-1][m-1])+CFL**2/2*(U_lax[j-1][0]-2*U_lax[j-1][m-1]+U_lax[j-1][m-2])
+    U_lax[j][0]=U_lax[j][m-1]
+
+
+
+#%%%%% plot %%%%%
+print &quot;h is&quot; ,h
+numb=1/h
+print 'numb is ',numb
+numb1=int(numb)
+print 'numb1 is',numb1
+print range(numb1)
+xlin=[(x-numb/2)/100 for x in range(numb1)]
+price1=[U_up[20][i] for i in range(m-1)]
+print 'xlin is ', xlin
+print 'price1 is ', price1
+
+plt.plot(xlin,price1)
+plt.show
+</code></pre>
+
+<p>服务器上的库函数有问题所以是用win7下的Canopy运行的</p>
+<p>出图的时候直接运行没有窗口，不知道为什么，然后写了一个辅助的小程序</p>
+<pre><code>#viod
+import matplotlib.pyplot as plt
+plt.show()
+</code></pre>
+
+<p>最后的图像是这样的</p>
+<p><img src="https://ooo.0o0.ooo/2015/11/16/564994f331d8e.png" alt="Hydromechanics_hw.png" /></p>
+<p>还8错~</p>
 
 </body>
 </html>
