@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dairy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1><strong>2016.11月.27写在一段很重要的时间里</strong></h1>
+<p>最近情绪波动很大，这里的最近指的是从11月开始。</p>
+<p>月初的年会是一个分界线，我心里很清楚，年会之前一定要把文章的中文版初稿写完，年会后就是紧锣密鼓的找工作，然后抽时间把文章改一改投出去。过年前可能工作能有个眉目，过年前后加上放假把毕业论文写完，开学就轻松多了。</p>
+<p>想的是不是很好？</p>
+<p>但是事情好像永远会向着你能想到的最坏的一面发展。</p>
+<p>预先已经知道找工作很麻烦很累，真正身临其中后，我发现之前的晕车晕机、耽误时间等等顾虑都是完全不重要的。这件事情给人最大的折磨就是对精神的摧残。除了有捷径可走的，很多人都是在找工作的初期就被击垮了所有的自信心。当然，对方不至于有恶声恶语，但是冷漠和拒绝的笑容还是看的懂的。是的，有的人会明确的告诉你，专业不合适，性别不合适，地域不合适，科研水平不够格.....换着花样粉墨登场的面具背后都是，拒绝。甚至有的非常和善甚至对你非常感兴趣，相谈甚欢，然后不了了之。</p>
+<p>等待，尤其是无声无期的等待真的是煎熬。现在我落笔的时候，这场煎熬也才不过正式持续了不到一个星期，已经感觉有些扛不住了。</p>
+<p>很多事情我以为我已经早就想清楚了，因为和周围同学比起来，虽然没什么优势，但找工作的顾虑也要小很多，换言之，预设的底线要低很多。怎么都能活，我曾经这么对自己，也对别人说。但是最近几天挂在嘴边的好像都是，活不下去了。</p>
+<p>从南京转合肥的时候，高铁站大厅又亮又空，只有改签的队伍吵吵嚷嚷。在月台等车的时候有很多雪花从头顶很高的天花板缝隙飘下来，那时候不远处和谐号披风戴雪从树林间慢慢过来，同一个方向有个铁路小哥，戴着白色围巾，眼睛很亮；还有一个嘴唇很红很好看的姐姐用好听的声音跟我说怎么上车。一个小时的车程之外，是我即将回去的旧地。那不短不长的一个半小时的车程是心里最安静的时候，好像能听见周围一切的声音，就是听不到自己的。</p>
+<p>在合肥的几天，走过旧路，也见了旧人。</p>
+<p>第一天晚上躺在床上，真的只有一个人的时候，潜意识里压抑着的感情，确认了安全的环境，汹涌地挤了出来，淹没了整个房间。当时我的样子一定很滑稽，前一刻还在嗑瓜子儿，下一刻就抱着自己的头失声痛哭。</p>
+<p>说到底，人都是和自己较劲。</p>
+<p>活都是能活的，但是不想这么活。</p>
+<p>第一次有人问我人为什么要活着的时候，发问者自己都觉得可笑。</p>
+<p>姑娘，没什么可笑的。整天谈理想的人挺可笑，但是连理想都不谈的是不是挺可悲？</p>
+<p>记得当初我是这么说的，人活着就是为了知道为什么要活着。听起来是不是跟放屁一样？</p>
+<p>然而现在我能给的答案好像差不了多少。既然人都是跟自己较劲，那我就是要和这个简单又矫情、懒散又拼命、一事无成又才华横溢的自己较劲下去，直到有一天达成和解，直到有一天找到出路。这条出路的尽头就是innner peace，这个词儿实在是找不到合适的中文说法，但是最接近的应该就是淡然吧。</p>
+<p>曾经有一段时间我把自己的懒散和消沉归结于没有目标。现在好了，人生的终极目标都定了，还有什么好发愁的。下一个目标还有好几十年啦~</p>
+<p>从到达合肥，基本都是H同学陪着我，下火车，吃饭，打电动，抓娃娃，玩VR。说起来对于我这么宅的家伙来说，很久都没有玩的这么开心了。尤其是VR游戏坚定了我要挣钱的决心！嗯！是不是很没有出息...最后一天去看了电影，一起匆匆忙忙地去赶飞机。</p>
+<p>这几天可能会让我永远记住的一点，就是H同学给我的无形中的信心。尤其是最后赶飞机的时候，我都已经几乎要放弃准备改签了，H同学非常蛮横无理地要求一定要赶上。在机场大巴上，我不由自主的又去查最近的航班和火车，甚至开始准备订当天的酒店，但是一瞬间突然想到H同学说：“一定赶得上!&quot;的表情，我心里就一直对自己说，真的，一定要赶上啊！就算是到时候冲进绿色通道也要赶上！</p>
+<p>坐上飞机的时候，我觉得不仅仅是赶上了飞机，好像真的获得了一个很珍贵的东西。</p>
+<p>是不是有点像世界观不稳定的小孩子写的？可能前几十年我过的确实太自以为是了，这么畸形的价值观冲击一下也好。</p>
+<p><strong>最后最后，H同学，我后来万分后悔，走之前真的很想拥抱你一下！你这几天为我做的事情，尤其是在这关口，对我而言意味着很多很多东西！铭记于心</strong></p>
+<p><img src="https://ooo.0o0.ooo/2016/11/27/583ae70f62e99.jpg" alt="种子.jpg" /></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
