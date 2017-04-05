@@ -8,5 +8,5 @@
 
 - [机器学习基础](https://hermionex.github.io/notes/ML/ML_basic.html)
 - [k-临近算法](https://hermionex.github.io/notes/ML/kNN.html)
-- [决策树](https://hermionex.github.io/notes/ML/trees.html)
+- [朴素贝叶斯](https://hermionex.github.io/notes/ML/bayes.html)
 
