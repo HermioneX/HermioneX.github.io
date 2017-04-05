@@ -24,8 +24,7 @@ k-近邻值法的一般流程：
 </br>
 建立kNN.py文件，导入模块：科学计算包NumPy和运算符模块operator，创建一个DataSet</br>
 导入matplotlib包是为了之后的分析
-
-　　
+　
 
     from numpy import *
 	import operator
